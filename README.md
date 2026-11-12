@@ -1,1 +1,3 @@
-# lurex-site
+# LUREX Group Concierge
+
+Сайт lurexconcierge.com
