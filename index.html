@@ -250,15 +250,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 </header>
 
 <main id="top">
-  <div class="wrap">
-    <div class="pal" role="group" aria-label="Palette">
-      <span data-l="ru">Цвет сайта (временно)</span><span data-l="en">Site colour (preview)</span>
-      <button type="button" id="pal-bordeaux" data-pal="bordeaux" aria-pressed="true"><span class="sw" style="background:linear-gradient(135deg,#160709 50%,#c9a36b 50%)"></span><span data-l="ru">Бордо и золото</span><span data-l="en">Bordeaux &amp; gold</span></button>
-      <button type="button" id="pal-noir" data-pal="noir" aria-pressed="false"><span class="sw" style="background:linear-gradient(135deg,#0d0d0d 50%,#cbb38a 50%)"></span><span data-l="ru">Чёрный и шампань</span><span data-l="en">Noir &amp; champagne</span></button>
-      <button type="button" id="pal-emerald" data-pal="emerald" aria-pressed="false"><span class="sw" style="background:linear-gradient(135deg,#0b1d18 50%,#c9a36b 50%)"></span><span data-l="ru">Изумруд и золото</span><span data-l="en">Emerald &amp; gold</span></button>
-      <button type="button" id="pal-ivory" data-pal="ivory" aria-pressed="false"><span class="sw" style="background:linear-gradient(135deg,#f5efe7 50%,#7a1a2a 50%)"></span><span data-l="ru">Слоновая кость и бордо</span><span data-l="en">Ivory &amp; bordeaux</span></button>
-    </div>
-  </div>
 
   <section class="hero">
     <div class="wrap hero-grid">
@@ -630,7 +621,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   var startL="ru", startP="bordeaux";
   try{
     var s=localStorage.getItem("lurex-lang"); if(s==="ru"||s==="en") startL=s; else if(!/^ru/i.test(navigator.language||"ru")) startL="en";
-    var p=localStorage.getItem("lurex-pal"); if(/^(bordeaux|noir|emerald|ivory)$/.test(p||"")) startP=p;
+    
   }catch(e){}
   document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-set"))})});
   document.querySelectorAll("[data-pal]").forEach(function(b){b.addEventListener("click",function(){setPal(b.getAttribute("data-pal"))})});
