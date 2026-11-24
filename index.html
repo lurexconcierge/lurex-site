@@ -85,6 +85,8 @@ nav a:hover{color:var(--ivory)}
 .where{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 .portrait{aspect-ratio:3/4;max-width:100%;border-radius:2px;background:linear-gradient(160deg,var(--deep),var(--wine) 60%,var(--ink));border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:24px}
 .portrait span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.portrait.photo{padding:0;margin:0;overflow:hidden;border:1px solid var(--acc-line);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.portrait.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
 .portrait .nm{display:block;font:italic 500 38px/1 var(--f-display);margin-bottom:10px;text-transform:none;letter-spacing:0;color:var(--ivory)}
 
 section{padding-block:84px}
@@ -277,9 +279,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
         </div>
         <div class="where"><span>Dubai</span><span>Paris</span><span>Courchevel</span><span>Cannes</span><span>Monaco</span><span>Saint-Tropez</span></div>
       </div>
-      <div class="portrait" aria-label="Photo placeholder">
-        <div><span class="nm">Ksenia</span><span data-l="ru">Здесь будет ваше фото</span><span data-l="en">Photo coming soon</span></div>
-      </div>
+      <figure class="portrait photo"><img src="img/hero-jet.jpg" alt="Rolls-Royce у трапа частного самолёта" width="1100" height="1885" fetchpriority="high"></figure>
     </div>
   </section>
 
